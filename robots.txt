@@ -1,4 +1,6 @@
+# robots.txt for DS Education
+# Allow all search engines to crawl the full site.
 User-agent: *
-Allow: /
+Disallow:
 
-Sitemap: https://dseducation.com/sitemap.xml
+Sitemap: https://butwalconsultinggroup.com/sitemap.xml

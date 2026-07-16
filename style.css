@@ -483,6 +483,61 @@ li { line-height: 1.7; }
 }
 .btn-outline:hover svg { fill: #04150A; }
 
+#table-of-contents {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 28px;
+  padding: 40px 38px;
+}
+
+#table-of-contents h2 {
+  margin-bottom: 18px;
+}
+
+#table-of-contents ol {
+  padding-left: 0;
+  margin: 0;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.9;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px 28px;
+}
+
+#table-of-contents ol li {
+  margin-bottom: 0;
+}
+
+#table-of-contents ol li a {
+  color: #A5F0B6;
+  transition: color var(--transition);
+  display: inline-block;
+}
+
+#table-of-contents ol li a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  #table-of-contents ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  #table-of-contents { padding: 28px 20px; }
+  #table-of-contents ol { grid-template-columns: 1fr; gap: 10px; }
+}
+
+.hero-actions a {
+  min-width: 200px;
+}
+
+.hero-badge {
+  background: rgba(34,197,94,0.1);
+  color: #0A6B5C;
+  border-color: rgba(34,197,94,0.3);
+}
+
 /* Hero Visual */
 .hero-visual {
   display: flex;
