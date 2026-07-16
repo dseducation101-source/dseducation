@@ -3,4 +3,5 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://butwalconsultinggroup.com/sitemap.xml
+Sitemap: https://dseducation.com.np/sitemap.xml
+
