@@ -80,6 +80,23 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 16px;
+  z-index: 1000;
+  background: var(--primary);
+  color: #04150A;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 16px;
+}
+
 img { max-width: 100%; display: block; border-radius: var(--radius-sm); object-fit: cover; }
 a { text-decoration: none; color: inherit; }
 p, span, li, button { font-size: 1rem; color: black; }
