@@ -978,8 +978,237 @@ li { line-height: 1.7; }
 .service-card p {
   font-size: 0.98rem;
   color: var(--text-muted);
-  line-height: 1.8;
+}
+
+/* ===== TUITION CLASSES ===== */
+.tuition-section {
+  padding: 0 5% 80px;
+}
+
+.tuition-header {
+  max-width: 1280px;
+  margin: 0 auto 28px;
+  background: linear-gradient(90deg, rgba(15, 122, 61, 0.98) 0%, rgba(19, 95, 65, 0.97) 50%, rgba(15, 122, 61, 0.98) 100%);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  box-shadow: 0 10px 24px rgba(15, 122, 61, 0.2);
+}
+
+.tuition-header h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #f5efe5;
+  text-align: center;
+}
+
+.tuition-header-line {
+  width: 110px;
+  height: 2px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 999px;
+}
+
+.tuition-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.tuition-card {
+  position: relative;
+  background: rgba(8, 14, 12, 0.88);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 24px 22px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  text-align: left;
+}
+
+.tuition-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 14% 18%, rgba(255,255,255,0.08), transparent 35%);
+  pointer-events: none;
+}
+
+.tuition-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.26);
+}
+
+.tuition-card-green {
+  border-color: rgba(34, 197, 94, 0.42);
+}
+
+.tuition-card-orange {
+  border-color: rgba(245, 158, 11, 0.42);
+}
+
+.tuition-card-blue {
+  border-color: rgba(59, 130, 246, 0.42);
+}
+
+.tuition-card-green .tuition-icon {
+  background: linear-gradient(135deg, rgba(34,197,94,0.14), rgba(34,197,94,0.32));
+  border-color: rgba(34,197,94,0.6);
+}
+
+.tuition-card-orange .tuition-icon {
+  background: linear-gradient(135deg, rgba(245,158,11,0.16), rgba(245,158,11,0.34));
+  border-color: rgba(245,158,11,0.7);
+}
+
+.tuition-card-blue .tuition-icon {
+  background: linear-gradient(135deg, rgba(59,130,246,0.16), rgba(59,130,246,0.34));
+  border-color: rgba(96,165,250,0.7);
+}
+
+.tuition-icon {
+  position: relative;
+  z-index: 1;
+  width: 88px;
+  height: 88px;
+  min-width: 88px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  margin: 0 auto;
+}
+
+.tuition-icon svg {
+  display: block;
+  width: 42px;
+  height: 42px;
+  fill: #f3f7f4;
+  margin: 0 auto;
+}
+
+.tuition-copy {
+  position: relative;
+  z-index: 1;
   flex: 1;
+  min-width: 0;
+}
+
+.tuition-copy h3 {
+  color: #f6f9f7;
+  font-size: clamp(1.1rem, 1.7vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.tuition-subheading {
+  color: #bfe8ce;
+  font-weight: 700;
+  font-size: 0.96rem;
+  margin-bottom: 10px;
+}
+
+.tuition-copy p {
+  color: rgba(234, 242, 236, 0.85);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.tuition-subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 12px;
+}
+
+.tuition-subjects .label {
+  font-weight: 800;
+  color: #f5faf7;
+  display: inline-block;
+}
+
+.tuition-subjects span:last-child {
+  color: rgba(240, 249, 242, 0.9);
+  font-weight: 600;
+}
+
+.tuition-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 0.8rem 1.1rem;
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.34);
+  border-radius: 999px;
+  color: #8ff2b0;
+  font-weight: 700;
+  font-size: 0.96rem;
+  transition: all .25s ease;
+  width: fit-content;
+  max-width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.tuition-cta:hover {
+  background: linear-gradient(135deg, rgba(34,197,94,0.2), rgba(34,197,94,0.32));
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(34,197,94,0.18);
+}
+
+@media (max-width: 1100px) {
+  .tuition-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .tuition-header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 16px;
+  }
+
+  .tuition-header-line {
+    width: 90px;
+  }
+
+  .tuition-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tuition-copy {
+    width: 100%;
+  }
+
+  .tuition-cta {
+    width: 100%;
+    line-height: 1.8;
+  }
 }
 
 /* ===== 11. STATS ===== */
